@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.mamae{
+    width: 920px;
+    height: 880px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px dashed slateblue;
+    gap: 20px;
+}
+
+.mamae__Filhinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    border: 2px dashed slateblue
+}
+
+.Filhinho__azul{
+    background-color: blue;
+    color: aqua;
+}
