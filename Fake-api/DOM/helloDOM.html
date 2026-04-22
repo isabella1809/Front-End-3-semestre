@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 id="titulo">bem vindo</h1>
+    <p>hello DOM JS</p>
+    // click
+    <button onclick="saudacao();">Click em Mim</button><br>
+    //click duas vezes
+    <button ondblclick="mouseClicadoduasvezes();">Click em Mim</button><br>
+     // quando precionar o botão
+    <button onmousedown="saudacao();">Click em Mim</button><br>
+    // quando solta botão
+    <button onmouseup="saudacao();">Click em Mim</button><br>
+    // quando passa em cima do botão
+    <button onmouseover="saudacaoLegal();">Passe o mouse</button><br>
+     <script>
+        alert(`titulo: ${document.getElementById("titulo").textContent}`);
+        // JavaScritp é uma linguagem casa sensitive
+        // por convenção, utilizando o padrão camel case 
+        // - minusculo a partir da segunda palavra
+        function saudacao(){
+           alert("Hellow World");
+        } 
+        function saudacaoLegal(){
+           alert("olá amigo!");
+        } 
+        function mouseClicadoduasvezes(){
+           alert("olá Mouse Clicado 2 vezes!");
+        } 
+        
+    </script>
+</body>
+</html>

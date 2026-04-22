@@ -4,18 +4,18 @@ function validarFormulario() {
     // alert("Olá eu fui clicado, top top!!");
     let Nome = document.getElementById("nome").value.trim();
     let Sobrenome = document.getElementById("sobrenome").value.trim();
-     let Email = document.getElementById("email").value.trim();
-    let DDI = document.getElementById("ddi").value.trim();
-     let DDD = document.getElementById("ddd").value.trim();
-     let Telefone = document.getElementById("telefone").value.trim();
-     let Endereço = document.getElementById("endereço").value.trim();
-     let CEP = document.getElementById("cep").value.trim();
-    let Rua = document.getElementById("rua").value.trim();
-     let Casa = document.getElementById("casa").value.trim();
-     let Cidade = document.getElementById("cidade").value.trim();
-    let Bairro = document.getElementById("bairro").value.trim();
-     let Estado = document.getElementById("estado").value.trim();
-     let Anotações = document.getElementById("Anotações").value.trim();
+    //  let Email = document.getElementById("email").value.trim();
+    // let DDI = document.getElementById("ddi").value.trim();
+    //  let DDD = document.getElementById("ddd").value.trim();
+    //  let Telefone = document.getElementById("telefone").value.trim();
+    //  let Endereço = document.getElementById("endereço").value.trim();
+    //  let CEP = document.getElementById("cep").value.trim();
+    // let Rua = document.getElementById("rua").value.trim();
+    //  let Casa = document.getElementById("casa").value.trim();
+    //  let Cidade = document.getElementById("cidade").value.trim();
+    // let Bairro = document.getElementById("bairro").value.trim();
+    //  let Estado = document.getElementById("estado").value.trim();
+    //  let Anotações = document.getElementById("Anotações").value.trim();
 
     let quantidadeErros = 0;
 
@@ -32,79 +32,79 @@ function validarFormulario() {
     } else {
         reiniciaBorda("sobrenome");
     }
-     if (Email.length == 0) {
-         forError("email");
-     } else {
-         reiniciaBorda("email");
-     }
+    //  if (Email.length == 0) {
+    //      forError("email");
+    //  } else {
+    //      reiniciaBorda("email");
+    //  }
 
-     if (DDI.length == 0) {
-         forError("ddi");
-     } else {
-         reiniciaBorda("ddi");
-     }
+    //  if (DDI.length == 0) {
+    //      forError("ddi");
+    //  } else {
+    //      reiniciaBorda("ddi");
+    //  }
 
-     if (DDD.length == 0) {
-         forError("ddd");
-     } else {
-         reiniciaBorda("ddd");
-     }
+    //  if (DDD.length == 0) {
+    //      forError("ddd");
+    //  } else {
+    //      reiniciaBorda("ddd");
+    //  }
 
-     if (Telefone.length == 0) {
-         forError("telefone");
-     } else {
-         reiniciaBorda("telefone");
-     }
+    //  if (Telefone.length == 0) {
+    //      forError("telefone");
+    //  } else {
+    //      reiniciaBorda("telefone");
+    //  }
 
-     if (Endereço.length == 0) {
-         forError("endereço");
-     } else {
-         reiniciaBorda("endereço");
-     }
-
-
-     if (Rua.length == 0) {
-         forError("rua");
-     } else {
-         reiniciaBorda("Rua");
-     }
-
-     if (CEP.length == 0) {
-         forError("cep");
-     } else {
-         reiniciaBorda("cep");
-     }
+    //  if (Endereço.length == 0) {
+    //      forError("endereço");
+    //  } else {
+    //      reiniciaBorda("endereço");
+    //  }
 
 
-     if (Casa.length == 0) {
-         forError("casa");
-     } else {
-         reiniciaBorda("casa");
-     }
+    //  if (Rua.length == 0) {
+    //      forError("rua");
+    //  } else {
+    //      reiniciaBorda("Rua");
+    //  }
 
-     if (Bairro.length == 0) {
-         forError("bairro");
-     } else {
-         reiniciaBorda("bairro");
-     }
+    //  if (CEP.length == 0) {
+    //      forError("cep");
+    //  } else {
+    //      reiniciaBorda("cep");
+    //  }
 
-     if (Estado.length == 0) {
-         forError("estado");
-     } else {
-         reiniciaBorda("estado");
-     }
 
-     if (Cidade.length == 0) {
-         forError("cidade");
-     } else {
-         reiniciaBorda("cidade");
-     }
+    //  if (Casa.length == 0) {
+    //      forError("casa");
+    //  } else {
+    //      reiniciaBorda("casa");
+    //  }
 
-     if (Anotações.length == 0) {
-         forError("Anotações");
-     } else {
-         reiniciaBorda("Anotações");
-     }
+    //  if (Bairro.length == 0) {
+    //      forError("bairro");
+    //  } else {
+    //      reiniciaBorda("bairro");
+    //  }
+
+    //  if (Estado.length == 0) {
+    //      forError("estado");
+    //  } else {
+    //      reiniciaBorda("estado");
+    //  }
+
+    //  if (Cidade.length == 0) {
+    //      forError("cidade");
+    //  } else {
+    //      reiniciaBorda("cidade");
+    //  }
+
+    //  if (Anotações.length == 0) {
+    //      forError("Anotações");
+    //  } else {
+    //      reiniciaBorda("Anotações");
+    //  }
 
    
     if (quantidadeErros != 0) {
@@ -115,18 +115,18 @@ function validarFormulario() {
  let objetoContato = {
     Nome : Nome,
     Sobrenome : Sobrenome,
-    Email : Email,
-    DDI : DDI ,
-    DDD : DDD,
-    Telefone : Telefone,
-    Endereço : Endereço,
-    Rua : Rua,
-    CEP : CEP,
-    Casa : Casa,
-    Bairro : Bairro,
-    Estado : Estado,
-Cidade : Cidade,
-Anotações : Anotações
+//     Email : Email,
+//     DDI : DDI ,
+//     DDD : DDD,
+//     Telefone : Telefone,
+//     Endereço : Endereço,
+//     Rua : Rua,
+//     CEP : CEP,
+//     Casa : Casa,
+//     Bairro : Bairro,
+//     Estado : Estado,
+// Cidade : Cidade,
+// Anotações : Anotações
 
  };
 
