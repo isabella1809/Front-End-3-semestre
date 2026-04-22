@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "bella",
+      "sobrenome": "santos",
+      "email": "bella.garcia"
+    },
+    {
+      "id": "7iuj8eLueHA"
+    },
+    {
+      "id": "AHkzvjpFQu0"
+    },
+    {
+      "nome": "bella",
+      "sobrenome": "santos",
+      "email": "bella.garcia",
+      "id": "zX2Kdp4npq0"
+    },
+    {
+      "nome": "thayna",
+      "sobrenome": "garcia",
+      "email": "thayna.garcia",
+      "id": "lP_WzKWyfmw"
+    },
+    {
+      "nome": "Ana",
+      "sobrenome": "garcia",
+      "email": "Ana.garcia",
+      "id": "WNuByLh6BIs"
+    },
+    {
+      "nome": "wagner",
+      "sobrenome": "garcia",
+      "email": "wagner.garcia",
+      "id": "jH0n-VPp-yg"
+    },
+    {
+      "nome": "vitoria",
+      "sobrenome": "garcia",
+      "email": "vitoria.garcia",
+      "id": "SOXUhU45oeg"
+    },
+    {
+      "id": "ZV3vyVwDv4A",
+      "nome": "uva",
+      "preço": "5,00",
+      "quantidade": "10"
+    },
+    {
+      "id": "fziMpEw0Sng",
+      "nome": "morango",
+      "preço": "10,00",
+      "quantidade": "20"
+    },
+    {
+      "id": "IMqPg5nNvpE",
+      "nome": "bolacha",
+      "preço": "3,00",
+      "quantidade": "1"
+    },
+    {
+      "id": "VJIlh1OrMKY",
+      "nome": "carne",
+      "preço": "50,00",
+      "quantidade": "1"
+    },
+    {
+      "id": "I8xDbHzZSCk",
+      "nome": "refri",
+      "preço": "7,00",
+      "quantidade": "1"
+    },
+    {
+      "Nome": "isa",
+      "Sobrenome": "gar",
+      "id": "VCE3oRGBgn4"
+    },
+    {
+      "Nome": "thayná",
+      "Sobrenome": "g",
+      "id": "Y70yoGhM-WQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
