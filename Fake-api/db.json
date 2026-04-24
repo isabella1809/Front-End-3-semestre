@@ -1,8 +1,12 @@
 {
-  "Usuarios":[
-    {"id": 1, "Nome": "isabella", "email": "isa@bella.com","idade": 17},
-  
-      {
+  "Usuarios": [
+    {
+      "id": "1",
+      "Nome": "isabella",
+      "email": "isa@bella.com",
+      "idade": 17
+    },
+    {
       "nome": "thayna",
       "sobrenome": "garcia",
       "email": "thayna.garcia",
@@ -26,6 +30,88 @@
       "email": "vitoria.garcia",
       "id": "SOXUhU45oeg"
     }
-    
-  ]
+  ],
+  "imc": [
+    {
+      "nome": "isa",
+      "altura": 1.68,
+      "peso": 70,
+      "IMC": 24.801587301587304,
+      "textoSituacao": "Saudável",
+      "id": "AljvDQl3-_Y"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "dWiWAilyeoo"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "3uHcJUQSntE"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "tB4GrJl3Z38"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "dlhZ6MNhgK8"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "8gONArqzDC4"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "x1raynpDSb0"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "nfh19POjRlo"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "s2n5BgTYNBg"
+    },
+    {
+      "nome": "isabella",
+      "altura": 1.8,
+      "peso": 100,
+      "IMC": 30.864197530864196,
+      "textoSituacao": "obesidade grau 1",
+      "id": "KCF3biAgJ-Y"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
