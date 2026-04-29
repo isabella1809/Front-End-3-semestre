@@ -1,77 +1,74 @@
 function calcular() {
     event.preventDefault();
     //entrada
-    let n1 = parseFloat( document.getElementById('n1').value ) ;
-    let n2 = parseFloat( document.getElementById("n2").value );
+    let n1 = parseFloat(document.getElementById('n1').value);
+    let n2 = parseFloat(document.getElementById("n2").value);
     let op = document.getElementById("operacao").value;//soma
     let resultado = null;
 
-    //chamei
-    console.log(n1);
-    console.log(n2);
-    
-    // recado 
-    if( isNaN(n1) || isNaN(n2) ){
-           alert("preencha todos os campos: n1 e n2");
-        return false;
+    if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById('resultado').innerText = 'Preencha todos os números!'
     }
 
 
     //processamento
-    if(op == 'soma'){
+    if (op == 'soma') {
         resultado = somar(n1, n2)
         resultado = resultado.toFixed(2);
 
-    } else if(op == 'subtracao') {
+    } else if (op == 'subtracao') {
         resultado = subtrair(n1, n2);
         resultado = resultado.toFixed(2);
 
-    } else if (op == 'multiplicacao'){
+    } else if (op == 'multiplicacao') {
         resultado = multiplicar(n1, n2);
         resultado = resultado.toFixed(2);
 
-    } else if (op == 'divisao'){
+    } else if (op == 'divisao') {
 
-        if(n2 == 0) {
+        if (n2 == 0) {
             resultado = 'Não é um número';
         } else {
             resultado = dividir(n1, n2);
             resultado = resultado.toFixed(2);
         }
-            
+
     } else {
         resultado = "Operação Inválida";
     }
-const ObjetoR = {
-    n1 : n1,
-    n2: n2,
-}
+
     //saída
     // console.log(`Resultado da operação: ${resultado}`);
     document.getElementById('resultado').innerHTML = resultado;
 
-    const objCal = {
-        n1 :n2,
-        n2 :n2,
-        op : op,
-        resultado : resultado
-    }
- const retorno = CadastrarNaAPI(objCal);
+    const objetoCalculadora = {
+        n1: n1,
+        n2: n2,
+        op: op,
+        resultado: resultado
+    };
 
-  if (retorno) {
-    buscarCal();
 
-            
-            document.getElementById("n1").value = "";
-            document.getElementById("n2").value = "";
-           alert(` Primeiro numero: ${nome} 
-                Segundo numero: ${nome}
-                 soma: ${op}
-                  resultado: ${resultado}
-                  `);   
-    } else {
-        alert("Não foi possivel cadastrar");
+    const retorno = cadastrarNaAPI(objetoCalculadora)
+    if (retorno) {
+        buscarResultados();
+
+        document.getElementById("n1").value = "";
+        document.getElementById("n2").value = "";
+        document.getElementById("operacao").value = "";
+        document.getElementById("resultado").innerHTML = "";
+
+        alert(`Conta foi cadastrada no banco:
+                Primeiro Numero: ${n1}
+                Segundo Numero: ${n2}
+                Operacao: ${op}
+                Resultado: ${resultado}
+            `);
     }
+    else {
+        alert("Nao foi possivel cadastrar!");
+    }
+
 
 }
 
@@ -79,7 +76,7 @@ const ObjetoR = {
  * Função somar recebe 2 valores e retorna a soma dos 
  * dois valores
  */
- function somar(valor1, valor2) {
+function somar(valor1, valor2) {
     return valor1 + valor2;
 }
 
@@ -93,59 +90,55 @@ function multiplicar(valor1, valor2) {
 }
 
 function dividir(valor1, valor2) {
-    if(valor2 == 0) {
+    if (valor2 == 0) {
         return 'Não é um número';
     }
-    
+
     return valor1 / valor2;
 }
 
- async function CadastrarNaAPI(objCal) {
-
+async function cadastrarNaAPI(objetoCalculadora) {
     try {
-        let resposta = await fetch("http://localhost:3000/calculadora", {
-            method: "post",
-            body: JSON.stringify(objCal),
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8"
-            }
-
-
+        const resposta = await fetch("http://localhost:3000/calculadora", {
+            method: "POST",
+            body: JSON.stringify(objetoCalculadora),
+            headers: { "Content-Type": "application/json; charset=UTF-8" }
         });
+
         return true;
-
     } catch (error) {
-
         console.log(error);
         return false;
-
     }
 }
 
-async function buscarCal() {
+async function buscarResultados() {
     try {
-        const retorno = await fetch("http://localhost:3000/calculadora");
-        const dadosRetornados = await retorno.json();
+        const resposta = await fetch("http://localhost:3000/calculadora");
+        const dados = await resposta.json();
 
+        const container = document.getElementById("data");
 
+        console.log(dados)
 
-        console.log(dadosRetornados);
-        const tabela = document.getElementById("cadastro");
-let template = "";
-        for (let i = 0; i < dadosRetornados.length; i++) {
-           template += `<article class="data__card-result">
-                    <span>${dadosRetornados[i].n1}</span>
-                    <span>${dadosRetornados[i].n2}</span>
-                    <span>${dadosRetornados[i].op}</span>
-                    <span>${dadosRetornados[i].resultado}</span>
-                </article>`;
+        let template = "";
 
-        }
+        dados.forEach(item => {
+            template += `
+            <article class="data__card-result">
+                <span><strong>Primeiro Número:</strong> ${item.n1}</span>
+                <span><strong>Segundo Número:</strong> ${item.n2}</span>
+                <span><strong>Operação:</strong> ${item.op}</span>
+                <span><strong>Resultado:</strong> ${item.resultado}</span>
+            </article>`;
 
-      tabela.innerHTML = template;  
+        });
+        container.innerHTML = template;
+        
     } catch (error) {
         console.log(error);
-
     }
 }
 
+
+ 

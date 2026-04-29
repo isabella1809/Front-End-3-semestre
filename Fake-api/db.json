@@ -134,6 +134,13 @@
       "op": "multiplicacao",
       "resultado": "2.00",
       "id": "DnedtN1HIiI"
+    },
+    {
+      "n1": 3,
+      "n2": 3,
+      "op": "soma",
+      "resultado": "6.00",
+      "id": "1RuL_PN_h4I"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
