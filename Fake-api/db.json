@@ -113,9 +113,28 @@
       "id": "KCF3biAgJ-Y"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json",
-
-  "calculadora" : [
-
-  ]
+  "calculadora": [
+    {
+      "n1": -2,
+      "n2": -2,
+      "op": "multiplicacao",
+      "resultado": "2.00",
+      "id": "_4rhCHxVOZQ"
+    },
+    {
+      "n1": -2,
+      "n2": -2,
+      "op": "multiplicacao",
+      "resultado": "2.00",
+      "id": "Zk1-UUAN2Oc"
+    },
+    {
+      "n1": 2,
+      "n2": 2,
+      "op": "multiplicacao",
+      "resultado": "2.00",
+      "id": "DnedtN1HIiI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
